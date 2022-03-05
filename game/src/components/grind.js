@@ -3,13 +3,13 @@ import { GSCV } from "../contexts/GSCV";
 
 function Grind() {
 
-    const {gold, score, currentView, setGold, setScore} = useContext(GSCV) //importing context from GSCV
+    const {gold, score, currentView, damage, setGold, setScore,setCurrentView, setDamage} = useContext(GSCV) //importing context from GSCV
 
   //testClick function to increase gold and score when clicked, simulating
   //resource gain during gameplay
     function testClick(){
-        setGold(gold + 1)
-        setScore(score + 1)
+        setGold(gold + damage)
+        setScore(score + damage)
         console.log(`gold: ${gold}`)
         console.log(`score: ${score}`)
       }

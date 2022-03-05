@@ -1,11 +1,18 @@
+import { Button } from "bootstrap";
 import React, {useState, useContext} from "react";
 import { GSCV } from "../contexts/GSCV";
 
 function Spend() {
 
-    const {gold, score, currentView, setGold, setScore} = useContext(GSCV) //importing context from GSCV
+    const {gold, score, currentView, damage, setGold, setScore,setCurrentView, setDamage} = useContext(GSCV) //importing context from GSCV
+    function damageUp(){
+        setDamage(damage+1);
+    }
 
-return(<div>placeholder lmao</div>)
+
+return(<div>
+    <button onClick={damageUp}>Placeholder lmao</button>
+    </div>)
 
 }
 export default Spend;

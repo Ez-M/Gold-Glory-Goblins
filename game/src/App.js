@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css"; 
+// import "bootstrap/dist/css/bootstrap.min.css"; 
 
 import Grind from "./components/grind";
 import Scoreboard from "./components/scoreboard";

@@ -6,6 +6,7 @@ const GSCVProvider = (props) => {
   const [gold, setGold] = useState(0); //Player's current gold
   const [score, setScore] = useState(0); //Player's total gold ever earned (plus achivements?)
   const [currentView, setCurrentView] = useState(""); //variable to tell the game what tab to render
+  const [damage, setDamage] = useState(1); // Player's current damage value (clicker multiplier lmao)
     return (
          <GSCV.Provider 
             value={{
@@ -14,7 +15,9 @@ const GSCVProvider = (props) => {
                 score,
                 setScore,
                 currentView,
-                setCurrentView
+                setCurrentView,
+                damage,
+                setDamage
              }}>
                {props.children}
          </GSCV.Provider>
