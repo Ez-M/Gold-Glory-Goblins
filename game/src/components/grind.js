@@ -3,20 +3,20 @@ import { GSCV } from "../contexts/GSCV";
 
 function Grind() {
 
-    const {gold2, score2, currentView2} = useContext(GSCV)
+    const {gold, score, currentView, setGold, setScore} = useContext(GSCV)
 
 
     function testClick(){
-        // setGold2(gold2 + 1)
-        // setScore2(score2 + 1)
-        console.log(`gold: ${gold2}`)
-        console.log(`score: ${score2}`)
+        setGold(gold + 1)
+        setScore(score + 1)
+        console.log(`gold: ${gold}`)
+        console.log(`score: ${score}`)
       }
     
     return(
     <div>
     Punch that goblin!
-    <button onClick={testClick}>{gold2}</button>
+    <button onClick={testClick}>{gold}</button>
     </div>
     )
 }

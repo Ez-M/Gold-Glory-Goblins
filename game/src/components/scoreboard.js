@@ -2,10 +2,10 @@ import React, {useState, useContext} from "react";
 import { GSCV } from "../contexts/GSCV";
 
 function Scoreboard() {
-    const {gold2, score2, currentView2} = useContext(GSCV)
+    const {gold, score, currentView} = useContext(GSCV)
 
     return(   
-         <div>gold: {gold2}  score: {score2} currentView: {currentView2}</div>
+         <div>gold: {gold}  score: {score} currentView: {currentView}</div>
           )
 
 }
