@@ -5,7 +5,7 @@ const GSCVProvider = (props) => {
   // in order to get things to dynamically render/update
   const [gold, setGold] = useState(0); //Player's current gold
   const [score, setScore] = useState(0); //Player's total gold ever earned (plus achivements?)
-  const [currentView, setCurrentView] = useState(""); //variable to tell the game what tab to render
+  const [currentView, setCurrentView] = useState("Home"); //variable to tell the game what tab to render
   const [damage, setDamage] = useState(1); // Player's current damage value (clicker multiplier lmao)
   const [health, setHealth] = useState(5);
   const [maxHealth, setMaxHealth] = useState(5);
