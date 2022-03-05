@@ -4,13 +4,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
 
-  var gold = 0;
-  var score = 0;
-  var currentView = "";
+  var gold = 45; //Player's current gold
+  var score = 0; //Player's total gold ever earned (plus achivements?)
+  var currentView = ""; //variable to tell the game what tab to render
 
   return (<div className="App">
-    Hello World!
+    Hello Adventurer!
     <button>{gold}</button>
+    <br/>
+    <p>gold: {gold}  score: {score} currentView: {currentView}</p>
   </div>
   );
 }
