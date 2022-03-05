@@ -5,16 +5,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Grind from "./components/grind";
 import Scoreboard from "./components/scoreboard";
 import GSCVProvider from "./contexts/GSCV";
+import Spend from "./components/spend";
+
 
 function App() {
-
-
-
-
-
-  //testClick function to increase gold and score when clicked, simulating
-  //resource gain during gameplay
-
 
   return (
     
@@ -24,7 +18,11 @@ function App() {
     <br/>
     <Grind />
     <br/>
+    <Spend />
+    <br/>
     <Scoreboard />
+
+
     </GSCVProvider>
   </div>
   );
