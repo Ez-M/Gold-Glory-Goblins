@@ -16,7 +16,7 @@ function Spend() {
 
 
 return(<div>
-    <button onClick={damageUp}>Placeholder lmao</button>
+    <button onClick={damageUp}>{damage*5}</button>
     </div>)
 
 }
