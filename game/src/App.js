@@ -6,6 +6,7 @@ import Grind from "./components/grind";
 import Scoreboard from "./components/scoreboard";
 import GSCVProvider from "./contexts/GSCV";
 import Spend from "./components/spend";
+import Main from "./components/main";
 
 
 function App() {
@@ -14,15 +15,7 @@ function App() {
     
   <div className="App">
     <GSCVProvider>
-    Hello Adventurer!
-    <br/>
-    <Grind />
-    <br/>
-    <Spend />
-    <br/>
-    <Scoreboard />
-
-
+    <Main />
     </GSCVProvider>
   </div>
   );

@@ -7,6 +7,12 @@ const GSCVProvider = (props) => {
   const [score, setScore] = useState(0); //Player's total gold ever earned (plus achivements?)
   const [currentView, setCurrentView] = useState(""); //variable to tell the game what tab to render
   const [damage, setDamage] = useState(1); // Player's current damage value (clicker multiplier lmao)
+  const [health, setHealth] = useState(5);
+  const [maxHealth, setMaxHealth] = useState(5);
+  const [stamina, setStamina] = useState(5);
+  const [maxStamina, setMaxStamina] = useState(5);
+  const [mana, setMana] = useState(5);
+  const [maxMana, setMaxMana] = useState(5);
 
   const [strength, setStrength] = useState(1); // Player's current strength value (clicker multiplier lmao)
   const [dexterity, setDexterity] = useState(1); // Player's current dexterity value (clicker multiplier lmao)
@@ -44,7 +50,20 @@ const GSCVProvider = (props) => {
                 meleeSkill,
                 setMeleeSkill,
                 rangedSkill,
-                setRangedSkill
+                setRangedSkill,
+                strXP,
+                setStrXP,
+                dexXP, setDexXP,
+                intXP, setIntXP,
+                fortXP, setFortXP,
+                melXP, setMelXP,
+                ranXP, setRanXP,
+                health, setHealth,
+                maxHealth, setMaxHealth,
+                stamina, setStamina,
+                maxStamina, setMaxStamina,
+                mana, setMana,
+                maxMana, setMaxMana
 
              }}>
                {props.children}
