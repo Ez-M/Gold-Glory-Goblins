@@ -1,6 +1,9 @@
 import React, { createContext, useState, useContext } from 'react'
-export const combatStuff = createContext()
-const combatProvider = (props) => {
+import { GSCV } from "../contexts/GSCV";
+
+
+export const CombatStuff = createContext()
+const CombatProvider = (props) => {
 
     const {gold, score, currentView, damage, strength, dexterity, intelligence, fortitude, meleeSkill, rangedSkill, strXP, dexXP, intXP, fortXP, melXP, ranXP, setGold, setScore,setCurrentView, setDamage, setStrength, setDexterity, setIntelligence, setFortitude, setMeleeSkill, setRangedSkill, setStrXP, setDexXP, setIntXP, setFortXP, setMelXP, setRanXP, health, setHealth, maxHealth, setMaxHealth, stamina, setStamina, maxStamina, setMaxStamina, mana, setMana, maxMana, setMaxMana, magicSkill, setMagicSkill, magXP, setMagXP,} = useContext(GSCV) //importing context from GSCV
 
@@ -8,11 +11,12 @@ const combatProvider = (props) => {
     var fighting = false
 
   function attackPlayer(number){
-      setHealth()
+      let a = number;
+      () => {setHealth(health-a)};
   }
 
   const enemy ={
-      name: enemy,
+      name: "enemy",
       HP: 1,
       CHP: 1,
       mana: 1,
@@ -20,13 +24,13 @@ const combatProvider = (props) => {
       damage: 1,
       armor: 0,
       actionToken:0,
-      actions: [attackPlayer(this.damage)]
+      actions: [1,2]
 
   }
 
 
     return (
-         <Combat.Provider 
+         <CombatStuff.Provider 
             value={{
                 
                 attackPlayer,
@@ -35,7 +39,7 @@ const combatProvider = (props) => {
 
              }}>
                {props.children}
-         </Combat.Provider>
+         </CombatStuff.Provider>
     )
 }
-export default combatProvider
+export default CombatProvider
