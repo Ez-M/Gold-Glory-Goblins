@@ -14,10 +14,8 @@ function App() {
   return (
     
   <div className="App">
-    <GSCVProvider>
-    <Main />
-    </GSCVProvider>
-  </div>
+        <Main />
+      </div>
   );
 }
 
