@@ -1,15 +1,26 @@
-import React, {useState, useContext} from "react";
+import React, {useState, useContext, useEffect} from "react";
 import { GSCV } from "../contexts/GSCV";
 
-function Home() {
+
+
+
+
+function WIP404() {
+
     const {gold, score, currentView, damage, strength, dexterity, intelligence, fortitude, meleeSkill, rangedSkill, strXP, dexXP, intXP, fortXP, melXP, ranXP, setGold, setScore,setCurrentView, setDamage, setStrength, setDexterity, setIntelligence, setFortitude, setMeleeSkill, setRangedSkill, setStrXP, setDexXP, setIntXP, setFortXP, setMelXP, setRanXP, health, setHealth, maxHealth, setMaxHealth, stamina, setStamina, maxStamina, setMaxStamina, mana, setMana, maxMana, setMaxMana} = useContext(GSCV) //importing context from GSCV
 
-// just a placeholder, might use for a rest page
+   //literally just a placeholder page for when thigns don't work yet lmao
 
-    return(   
-         <div> What should we do today? </div>
-          )
 
-}
+    return(
+    <div>
+        
+   Well this is embarressing... 
+        
 
-export default Home;
+    </div>
+    );
+
+};
+
+export default WIP404;

@@ -10,7 +10,7 @@ import Navbar from "./navbar";
 
 import GSCVProvider from "../contexts/GSCV";
 import { render } from "react-dom";
-
+// Used as a primary render page, so that I can pass stats to the child components and to help with organization
 
 function Main() {
 

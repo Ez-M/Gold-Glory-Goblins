@@ -31,6 +31,8 @@ function Spend() {
 
 
 return(<div>
+    Come, welcome to Bog Bob's Bootleg Bazaar! If it can be smuggled, it can be sold!
+    <br/>
     <button onClick={damageUp1}>Upgrade 1 damage for {damage*5} gold</button>
     <button onClick={healthUp1}>Upgrade 5 Health for {maxHealth+5} gold</button>
     <button onClick={manaUp1}>Upgrade 1 mana for {maxMana*5} gold</button>

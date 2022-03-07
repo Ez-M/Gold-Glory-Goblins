@@ -3,7 +3,7 @@ import { GSCV } from "../contexts/GSCV";
 
 function Scoreboard() {
     const {gold, score, currentView, damage, strength, dexterity, intelligence, fortitude, meleeSkill, rangedSkill, strXP, dexXP, intXP, fortXP, melXP, ranXP, setGold, setScore,setCurrentView, setDamage, setStrength, setDexterity, setIntelligence, setFortitude, setMeleeSkill, setRangedSkill, setStrXP, setDexXP, setIntXP, setFortXP, setMelXP, setRanXP, health, setHealth, maxHealth, setMaxHealth, stamina, setStamina, maxStamina, setMaxStamina, mana, setMana, maxMana, setMaxMana} = useContext(GSCV) //importing context from GSCV
-
+// used to communicate feedback to the player. Currently also used for debugging. 
     return(   
     <div>
           <div> Health: {health}/{maxHealth}   Mana: {mana}/{maxMana}  Stamina: {stamina}/{maxStamina} </div> 

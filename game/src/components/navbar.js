@@ -16,7 +16,7 @@ function Navbar() {
     <div>
         
         <button onClick={()=>setCurrentView("Store")}> Go to the store!</button>
-        <button onClick={()=>setCurrentView("Grind")}> Go kill some goblins!</button>
+        <button onClick={()=>setCurrentView("Jobs")}> Go get some gold!</button>
         <button onClick={()=>setCurrentView("Home")}> Go to Guildhall!</button>
 
     </div>
