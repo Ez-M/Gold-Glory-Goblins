@@ -19,7 +19,7 @@ function Main() {
     return(   
       
         <GSCVProvider>
-        Hello Adventurer! 
+        Gold, Glory, and Goblins!
         <Navbar />
         <br/>
                

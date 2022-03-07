@@ -10,15 +10,30 @@ function Spend() {
         if (gold >= damage*5) {
         setGold(gold - damage*5)
         setDamage(damage+1);
+        }
+    }
 
+    function healthUp1(){
+        if (gold >= maxHealth+5) {
+        setGold(gold - maxHealth+5);
+        setMaxHealth(maxHealth+5);
+        setHealth(health+5);
+        }
+    }
+
+    function manaUp1(){
+        if (gold >= maxMana*5) {
+        setGold(gold - maxMana*5);
+        setMaxMana(maxMana+1);
+        setMana(mana+1);
         }
     }
 
 
 return(<div>
     <button onClick={damageUp1}>Upgrade 1 damage for {damage*5} gold</button>
-    <button onClick={damageUp1}>Upgrade 1 damage for {damage*5} gold</button>
-    <button onClick={damageUp1}>Upgrade 1 damage for {damage*5} gold</button>
+    <button onClick={healthUp1}>Upgrade 5 Health for {maxHealth+5} gold</button>
+    <button onClick={manaUp1}>Upgrade 1 mana for {maxMana*5} gold</button>
 
     </div>)
 
