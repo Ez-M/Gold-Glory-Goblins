@@ -12,7 +12,7 @@ function Scoreboard() {
           <br/> 
           <div> Strength: {strength} &#40;{strXP}/{strength}XP&#41;  Dexterity: {dexterity} &#40;{dexXP}/{dexterity}XP&#41;  Intelligence: {intelligence} &#40;{intXP}/{intelligence}XP&#41;   Fortitude: {fortitude} &#40;{fortXP}/{fortitude}XP&#41;</div> 
           <br/>
-          <div>MeleeSkill: {meleeSkill} &#40;{melXP}/{meleeSkill}XP&#41; RangedSkill: {rangedSkill} &#40;{ranXP}/{rangedSkill}XP&#41;</div>
+          <div>MeleeSkill: {meleeSkill} &#40;{melXP}/{meleeSkill}XP&#41; RangedSkill: {rangedSkill} &#40;{ranXP}/{rangedSkill}XP&#41;  MagicSkill: {magicSkill} &#40;{magXP}/{magicSkill}XP&#41;</div>
           
          </div>
           )

@@ -36,7 +36,7 @@ return(<div>
     <br/>
     <button onClick={damageUp1}>Upgrade 1 damage for {damage*5} gold</button>
     <button onClick={healthUp1}>Upgrade 5 Health for {maxHealth+5} gold</button>
-    <button onClick={manaUp1}>Upgrade 1 mana for {maxMana*5} gold</button>
+    <button onClick={()=>setCurrentView('MagicStore')}>Go to the shaman's hut</button>
 
     </div>)
 

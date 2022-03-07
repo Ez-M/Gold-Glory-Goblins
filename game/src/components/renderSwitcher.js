@@ -7,6 +7,7 @@ import Scoreboard from "./scoreboard";
 import Home from "./home";
 import Jobs from "./jobs";
 import WIP404 from "./WIP";
+import MagicStore from "./magicStore";
 
 
 function RenderSwitcher() {
@@ -23,6 +24,7 @@ function RenderSwitcher() {
       case 'Store': return  <Spend />;   //opens bog bob's store
       case 'Grind': return  <Grind />;   // the kill things placeholder
       case 'Jobs': return <Jobs />;      // opens the jobs page (get gold)
+      case 'MagicStore': return <MagicStore />;
       
         default:    return  <WIP404 />; //not really a 404 lmao
 
