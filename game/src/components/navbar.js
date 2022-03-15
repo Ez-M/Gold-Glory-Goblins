@@ -15,7 +15,7 @@ function Navbar() {
           setMeleeSkill, setRangedSkill, setStrXP, setDexXP, setIntXP, setFortXP, setMelXP, setRanXP, health, setHealth, maxHealth, setMaxHealth,
            stamina, setStamina, maxStamina, setMaxStamina, mana, setMana, maxMana, setMaxMana, magicSkill, setMagicSkill, magXP,
             setMagXP,} = useContext(GSCV) //importing context from GSCV
-    const {attackPlayer,enemy, fighting}= useContext(CombatStuff) //combatStuff is info relevant to running combat instances. Used here for conditionally rendering the navbar.
+            const {attackPlayer,enemy, fighting, setFighting}= useContext(CombatStuff) //combatStuff is info relevant to running combat instances. Used here for conditionally rendering the navbar.
    
 if(fighting == false) {
     return(
