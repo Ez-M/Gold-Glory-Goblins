@@ -57,6 +57,12 @@ const CombatProvider = (props) => {
   //creating some basic universal functions to be used in combat, and an enemy constructor to be used for different enemy types
   const [fighting, setFighting] = useState(false);
   const [dynamic, setDynamic] = useState(1);
+  const [cHealth, setCHealth] = useState(999);
+  const [cMaxHealth, setCMaxHealth] = useState(999); 
+  const [cMana, setCMana] = useState(999); 
+  const [cMaxMana, setCMaxMana] = useState(999); 
+  const [cStamina, setCStamina] = useState(999); 
+  const [cMaxStamina, setCMaxStamina] = useState(999); 
 
   
 
@@ -91,7 +97,13 @@ function attackPlayer(number) {
         fighting,
         setFighting,
         dynamic,
-        setDynamic
+        setDynamic,
+        cMaxHealth, setCMaxHealth,
+        cMana, setCMana,
+        cMaxMana, setCMaxMana,
+        cStamina, setCStamina,
+        cMaxStamina, setCMaxStamina,
+        cHealth, setCHealth
       }}
     >
       {props.children}

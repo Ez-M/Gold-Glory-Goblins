@@ -6,7 +6,13 @@ import { CombatStuff } from "../contexts/combatStuff";
 
 function CombatFeed() {
   const [testVal, setTestVal] = useState(0);
-  const {dynamic, setDynamic}= useContext(CombatStuff) //combatStuff is info relevant to running combat instances. Used here for conditionally rendering the navbar.
+  const {dynamic, setDynamic,
+    cMaxHealth, setCMaxHealth,
+    cMana, setCMana,
+    cMaxMana, setCMaxMana,
+    cStamina, setCStamina,
+    cMaxStamina, setCMaxStamina,
+    cHealth, setCHealth}= useContext(CombatStuff) //combatStuff is info relevant to running combat instances. Used here for conditionally rendering the navbar.
   // player character combat token, used to represent the player's states loaded into a local variable to facilitate glorious battle!!
  
 
@@ -14,7 +20,8 @@ function CombatFeed() {
       <div>
     CombatFeed
     <br/>
-    {dynamic}
+    {/* {dynamic} */}
+    {cHealth}
     </div>
 
     )

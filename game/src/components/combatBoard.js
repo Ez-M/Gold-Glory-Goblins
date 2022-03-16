@@ -8,6 +8,13 @@ function CombatBoard({PCCT}) {
     
 
   const [testVal, setTestVal] = useState(0);
+  const {dynamic, setDynamic,
+    cMaxHealth, setCMaxHealth,
+    cMana, setCMana,
+    cMaxMana, setCMaxMana,
+    cStamina, setCStamina,
+    cMaxStamina, setCMaxStamina,
+    cHealth, setCHealth}= useContext(CombatStuff)
 
 
   // player character combat token, used to represent the player's states loaded into a local variable to facilitate glorious battle!!
@@ -39,7 +46,7 @@ function CombatBoard({PCCT}) {
 
 
 <div>
-    <div style = {style}> Health: {PCCT.health}/{PCCT.maxHealth}   Mana: {PCCT.mana}/{PCCT.maxMana}  Stamina: {PCCT.stamina}/{PCCT.maxStamina} </div>        
+    <div style = {style}> Health: {cHealth}/{PCCT.maxHealth}   Mana: {PCCT.mana}/{PCCT.maxMana}  Stamina: {PCCT.stamina}/{PCCT.maxStamina} </div>        
 </div>
 
 
