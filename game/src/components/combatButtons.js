@@ -1,4 +1,4 @@
-import React, {useState, useContext} from "react";
+import React, {useState, useContext, useEffect} from "react";
 import { GSCV } from "../contexts/GSCV";
 import { CombatStuff } from "../contexts/combatStuff";
 
@@ -35,11 +35,16 @@ function CombatButtons({PCCT}) {
 //     rangedSkill: rangedSkill,
 //     magicSkill: magicSkill
 //   }
-  
-  
+//   useEffect(() => {
+      
+//   })
+  function healthHit1(){
+    setCHealth(cHealth-1);
+    PCCT.health -=1;
+    }
     return(
       <div>
-          <button onClick={()=> { setCHealth(cHealth-1) }  }>Button 1</button> 
+          <button onClick= {()=> healthHit1()}>Button 1</button> 
      </div>
 
     )

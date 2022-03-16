@@ -57,7 +57,7 @@ function Combat() {
     <CombatBoard
       PCCT = {PCCT}
     />
-     <button onClick={()=> {PCCT.health-=1; console.log(PCCT.health)}}>Button home</button>
+     <button onClick={()=> {console.log(PCCT.health)}}>Button home</button>
      </CombatProvider>
     </div>
 
