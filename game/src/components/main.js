@@ -9,7 +9,7 @@ import RenderSwitcher from "./renderSwitcher";
 import Navbar from "./navbar";
 
 import GSCVProvider from "../contexts/GSCV";
-import CombatProvider from "../contexts/combatStuff"
+
 import { render } from "react-dom";
 // Used as a primary render page, so that I can pass stats to the child components and to help with organization
 
@@ -20,7 +20,7 @@ function Main() {
     return(   
       
         <GSCVProvider>
-          <CombatProvider>
+          
         Gold, Glory, and Goblins!
         <Navbar />
         <br/>
@@ -28,7 +28,7 @@ function Main() {
        <RenderSwitcher />
         <br/>
         <Scoreboard />
-        </CombatProvider>
+        
         </GSCVProvider>
      )
 

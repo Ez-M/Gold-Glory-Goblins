@@ -1,15 +1,19 @@
 import React, {useState, useContext} from "react";
 import { GSCV } from "../contexts/GSCV";
-import { CombatStuff } from "../contexts/combatStuff";
-import {CombatBoard} from "./combatBoard"
+
+import CombatButtons from "./combatButtons";
+import CombatFeed from "./combatFeed";
+import CombatBoard from "./combatBoard";
+import CombatProvider from "../contexts/combatStuff"
 
 
 
 function Combat() {
   const [testVal, setTestVal] = useState(0);
+  
 
   const {gold, score, currentView, damage, strength, dexterity, intelligence, fortitude, meleeSkill, rangedSkill, strXP, dexXP, intXP, fortXP, melXP, ranXP, setGold, setScore,setCurrentView, setDamage, setStrength, setDexterity, setIntelligence, setFortitude, setMeleeSkill, setRangedSkill, setStrXP, setDexXP, setIntXP, setFortXP, setMelXP, setRanXP, health, setHealth, maxHealth, setMaxHealth, stamina, setStamina, maxStamina, setMaxStamina, mana, setMana, maxMana, setMaxMana, magicSkill, setMagicSkill, magXP, setMagXP,} = useContext(GSCV) //importing context from GSCV
-  const {attackPlayer,enemy, fighting, setFighting}= useContext(CombatStuff) //combatStuff is info relevant to running combat instances. Used here for conditionally rendering the navbar.
+
 
   // player character combat token, used to represent the player's states loaded into a local variable to facilitate glorious battle!!
   const PCCT = {
@@ -37,12 +41,24 @@ function Combat() {
   var currentEnemies = []
     
     return(
+      
       <div>
-    <CombatFeed/> 
+        <CombatProvider>
+    <CombatFeed
+      // dynamic = {dynamic}
+    /> 
     <br/>
-    <CombatButtons/>
+    <CombatButtons
+    PCCT = {PCCT}
+    // dynamic = {dynamic}
+    // setDynamic= {setDynamic}
+    />
     <br/> 
-    <CombatBoard/>
+    <CombatBoard
+      PCCT = {PCCT}
+    />
+     <button onClick={()=> {PCCT.health-=1; console.log(PCCT.health)}}>Button home</button>
+     </CombatProvider>
     </div>
 
     )

@@ -11,9 +11,15 @@ import Main from "./components/main";
 
 function App() {
 
+  const style = {
+    backgroundColor: `rgb(110, 110, 110)`,
+    margin: `0 auto`,
+    height: `100vh`
+  }
+
   return (
     
-  <div className="App">
+  <div className="App" style = {style}>
         <Main />
       </div>
   );

@@ -55,8 +55,8 @@ const CombatProvider = (props) => {
   } = useContext(GSCV); //importing context from GSCV
 
   //creating some basic universal functions to be used in combat, and an enemy constructor to be used for different enemy types
-  var [fighting, setFighting] = useState(false);
-
+  const [fighting, setFighting] = useState(false);
+  const [dynamic, setDynamic] = useState(1);
 
   
 
@@ -90,6 +90,8 @@ function attackPlayer(number) {
         enemy,
         fighting,
         setFighting,
+        dynamic,
+        setDynamic
       }}
     >
       {props.children}
