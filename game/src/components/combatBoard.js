@@ -1,4 +1,4 @@
-import React, {useState, useContext} from "react";
+import React, {useState, useContext, useEffect} from "react";
 import { GSCV } from "../contexts/GSCV";
 import { CombatStuff } from "../contexts/combatStuff";
 
@@ -15,6 +15,22 @@ function CombatBoard({PCCT}) {
     cStamina, setCStamina,
     cMaxStamina, setCMaxStamina,
     cHealth, setCHealth}= useContext(CombatStuff)
+    
+//below is the useEffect that initializes combat display stats
+    useEffect(() => {
+        function initCombat() {
+            setCHealth(PCCT.health);
+            setCMaxHealth(PCCT.maxHealth);
+            setCMana(PCCT.mana);    
+            setCMaxMana(PCCT.maxMana);
+            setCStamina(PCCT.stamina);
+            setCMaxStamina(PCCT.maxStamina);   
+        }
+    
+        if (cHealth == 999){
+            initCombat();
+        }
+    })
 
 
   // player character combat token, used to represent the player's states loaded into a local variable to facilitate glorious battle!!
