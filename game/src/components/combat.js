@@ -40,7 +40,33 @@ function Combat() {
     const style = {
     color: `red`
   }
-  var currentEnemies = []
+  // demo for goblin stuff
+  const goblin = {
+    damage: 1,
+  health: 5,
+  maxHealth: 5,
+  stamina: 5,
+  maxStamina: 5,
+  mana: 5,
+  maxMana: 5,
+  actionToken: 0,
+  attack: function() {  
+  // setCHealth(cHealth - this.damage);
+  PCCT.health -= this.damage;
+  },
+  heal: function() {
+    // setCHealth(cHealth + this.damage);
+    PCCT.health += this.damage;
+  },
+  actions: function() {
+    switch(this.actionToken) {
+      case 0: this.attack(); console.log(this.actionToken); this.actionToken = 1; console.log(this.actionToken); break;
+      case 1: this.heal(); this.actionToken = 2; break;
+      case 2: console.log('case 2'); this.actionToken = 0; break; 
+    }
+  }
+  }
+  const currentEnemies = [goblin]
     
     return(
       
@@ -52,6 +78,7 @@ function Combat() {
     <br/>
     <CombatButtons
     PCCT = {PCCT}
+    currentEnemies = {currentEnemies}
     // dynamic = {dynamic}
     // setDynamic= {setDynamic}
     />

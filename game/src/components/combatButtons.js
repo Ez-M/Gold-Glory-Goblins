@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import { GSCV } from "../contexts/GSCV";
 import { CombatStuff } from "../contexts/combatStuff";
 
-function CombatButtons({ PCCT }) {
+function CombatButtons({ PCCT, currentEnemies }) {
   const [testVal, setTestVal] = useState(0);
   const {
     dynamic,
@@ -56,32 +56,20 @@ function CombatButtons({ PCCT }) {
     setCMana(cMana - 1);
     PCCT.mana -= 1;
   };
- 
-   // demo for goblin stuff
-   const goblin = {
-    damage: 1,
-  health: 5,
-  maxHealth: 5,
-  stamina: 5,
-  maxStamina: 5,
-  mana: 5,
-  maxMana: 5,
-  actionToken: 0,
-  attack: function() {  
-  setCHealth(cHealth - this.damage);
-  PCCT.health -= this.damage;
-  },
-  heal: function() {
-    setCHealth(cHealth + this.damage);
-    PCCT.health += this.damage;
-  },
-  actions: function() {
-    switch(this.actionToken) {
-      case 0: this.attack(); console.log(this.actionToken); this.actionToken = 1; console.log(this.actionToken); break;
-      case 1: this.heal(); this.actionToken = 0; break;
-    }
+
+  //for testing goblin
+  function setCStuff(){
+      setCHealth(PCCT.health);
+      setCStamina(PCCT.stamina);
+      setCMana(PCCT.mana);
   }
-  }
+ function combatDo(){
+     for (const i in currentEnemies){
+    currentEnemies[i].actions();
+     setCStuff();
+     }
+ }
+   
 
 
   return (
@@ -89,7 +77,7 @@ function CombatButtons({ PCCT }) {
       <button onClick={() => healthHit1()}>Button 1</button>
       <button onClick={() => manaHit1()}>Button mana</button>
       <button onClick={() => stamHit1()}>Button stam</button>
-      <button onClick={()=> goblin.actions()}>Button Goblin</button>
+      <button onClick={()=> combatDo()}>Button Goblin</button>
     </div>
   );
 }
