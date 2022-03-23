@@ -62,7 +62,7 @@ function CombatBoard({PCCT}) {
 
 
 <div>
-    <div style = {style}> Health: {cHealth}/{PCCT.maxHealth}   Mana: {PCCT.mana}/{PCCT.maxMana}  Stamina: {PCCT.stamina}/{PCCT.maxStamina} </div>        
+    <div style = {style}> Health: {cHealth}/{PCCT.maxHealth}   Mana: {cMana}/{PCCT.maxMana}  Stamina: {cStamina}/{PCCT.maxStamina} </div>        
 </div>
 
 

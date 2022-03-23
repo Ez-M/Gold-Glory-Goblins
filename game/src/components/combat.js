@@ -35,6 +35,8 @@ function Combat() {
     rangedSkill: rangedSkill,
     magicSkill: magicSkill
   }
+
+   
     const style = {
     color: `red`
   }
