@@ -65,11 +65,30 @@ function CombatButtons({ PCCT, currentEnemies }) {
   }
  function combatDo(){
      for (const i in currentEnemies){
+         console.log(currentEnemies);
     currentEnemies[i].actions();
      setCStuff();
      }
  }
    
+ function hitEnemy1() {
+     
+    for (const d in currentEnemies){
+    currentEnemies[d].health -= d;
+    console.log(currentEnemies[d]);
+    
+    }
+return;
+
+ }
+
+function createEnemies() {
+    for (const x in currentEnemies){
+        currentEnemies[x] = Object.create(currentEnemies[x])
+    }
+}
+
+//  createEnemies()
 
 
   return (
@@ -78,6 +97,7 @@ function CombatButtons({ PCCT, currentEnemies }) {
       <button onClick={() => manaHit1()}>Button mana</button>
       <button onClick={() => stamHit1()}>Button stam</button>
       <button onClick={()=> combatDo()}>Button Goblin</button>
+      <button onClick={()=> hitEnemy1()}>Button hit</button>
     </div>
   );
 }

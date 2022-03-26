@@ -42,6 +42,7 @@ function Combat() {
   }
   // demo for goblin stuff
   const goblin = {
+    name: "A Goblin!",
     damage: 1,
   health: 5,
   maxHealth: 5,
@@ -66,7 +67,14 @@ function Combat() {
     }
   }
   }
-  const currentEnemies = [goblin]
+
+  const tempEnemies = [goblin, goblin];
+  
+  var currentEnemies = [];
+
+for (const x in tempEnemies) {
+  currentEnemies.push(Object.assign({}, tempEnemies[x]))
+}
     
     return(
       
