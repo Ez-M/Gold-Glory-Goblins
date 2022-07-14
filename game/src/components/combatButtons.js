@@ -74,7 +74,7 @@ function CombatButtons({ PCCT, currentEnemies }) {
  function hitEnemy1() {
      
     for (const d in currentEnemies){
-    currentEnemies[d].health -= d;
+    currentEnemies[d].health -= PCCT.damage;
     console.log(currentEnemies[d]);
     
     }
