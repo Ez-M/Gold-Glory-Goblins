@@ -20,6 +20,7 @@ const GSCVProvider = (props) => {
   const [fortitude, setFortitude] = useState(1); // Player's current fortitude value (clicker multiplier lmao)
   const [meleeSkill, setMeleeSkill] = useState(1); // Player's current meleeSkill value (clicker multiplier lmao)
   const [rangedSkill, setRangedSkill] = useState(1); // Player's current rangedSkill value (clicker multiplier lmao)
+  const [magicSkill, setMagicSkill] = useState(0); //Player's current magic skill
 
   const [strXP, setStrXP] = useState(0); // Player's current Strength EXP (used to determine advancement)
   const [dexXP, setDexXP] = useState(0);
@@ -27,6 +28,7 @@ const GSCVProvider = (props) => {
   const [fortXP, setFortXP] = useState(0);
   const [melXP, setMelXP] = useState(0);
   const [ranXP, setRanXP] = useState(0);
+  const [magXP, setMagXP] = useState(0); 
 
     return (
          <GSCV.Provider 
@@ -63,7 +65,9 @@ const GSCVProvider = (props) => {
                 stamina, setStamina,
                 maxStamina, setMaxStamina,
                 mana, setMana,
-                maxMana, setMaxMana
+                maxMana, setMaxMana,
+                magicSkill, setMagicSkill, magXP, setMagXP,
+
 
              }}>
                {props.children}
